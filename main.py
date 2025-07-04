@@ -40,4 +40,5 @@ while True:
     dz_enterline()
     dstart_up()
 
+    print("Debug:")
     print(coords_split, x_enterline, z_enterline)
