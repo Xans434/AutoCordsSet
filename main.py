@@ -1,11 +1,26 @@
 import pyautogui
 import time
 
+
 t = time
 g = pyautogui
 
+
 x_enterline = [387, 209]
 z_enterline = [395, 255]
+btn_setcoords = [384, 347]
+btn_launch = [395, 392]
+
+
+def dx_enterline():
+    g.moveTo(x_enterline[0], x_enterline[1])
+    g.leftClick()
+    g.typewrite(coords_split[0])
+
+def dz_enterline():
+    g.moveTo(z_enterline[0], z_enterline[1])
+    g.leftClick()
+    g.typewrite(coords_split[1])
 
 
 while True:
@@ -14,13 +29,8 @@ while True:
 
     t.sleep(3)
 
-    g.moveTo(x_enterline[0], x_enterline[1])
-    g.leftClick()
-    g.typewrite(coords_split[0])
-    t.sleep(0.1)
-    g.moveTo(z_enterline[0], z_enterline[1])
-    g.leftClick()
-    g.typewrite(coords_split[1])
-
+    dx_enterline()
+    dz_enterline()
+    
 
     print(coords_split, x_enterline, z_enterline)
