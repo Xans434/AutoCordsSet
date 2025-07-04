@@ -23,14 +23,21 @@ def dz_enterline():
     g.typewrite(coords_split[1])
 
 
+def dstart_up():
+    g.moveTo(btn_setcoords[0], btn_setcoords[1])
+    g.leftClick()
+    g.moveTo(btn_launch[0], btn_launch[1])
+    g.leftClick()
+
+
 while True:
-    coords = str(input('pls input COORDS - XZ: '))
+    coords = str(input('COORDS - XZ: '))
     coords_split = coords.split()
 
     t.sleep(3)
 
     dx_enterline()
     dz_enterline()
-    
+    dstart_up()
 
     print(coords_split, x_enterline, z_enterline)
